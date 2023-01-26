@@ -17,10 +17,6 @@
   padding: 15px;
 }
 
-.book-info:nth-child(even) {
-  background-color: rgb(165, 181, 181);
-}
-
 .description {
   display: flex;
   flex-direction: row;
