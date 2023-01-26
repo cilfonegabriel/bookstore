@@ -2,7 +2,6 @@
   width: 100%;
   padding-left: 60px;
   padding-right: 60px;
-  background: wheat;
 }
 
 .nav-bar {
@@ -10,6 +9,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
 }
 
 .nav-bar ul {
@@ -35,12 +35,12 @@
   font-size: 35px;
   margin: 0;
   padding: 0;
-  color: rgb(187, 0, 255);
+  color: #0290ff;
 }
 
 .nav-bar a {
   text-decoration: none;
-  color: rgb(187, 0, 255);
+  color: #0290ff;
 }
 
 .nav-bar a:hover {
