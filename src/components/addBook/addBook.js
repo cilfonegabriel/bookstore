@@ -20,5 +20,4 @@ const Add = () => (
         </form>
     </div>
 );
-
 export default Add;
