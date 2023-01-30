@@ -1,77 +1,46 @@
 import React from 'react';
 import './books.css';
+import propTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../../redux/books/book';
 
-const Books = () => (
-  <div className="books-section">
-    <div className="book-info">
-      <div className="description">
-        <h2>Book 1</h2>
-        <h4>Belay</h4>
+const Books = ({
+    id, title, author, category,
+  }) => {
+    const send = useDispatch();
+    const remove = () => {
+      send(removeBook(id));
+    };
+  
+    return (
+      <div className="books-section">
+        <div className="book-info">
+          <div className="description">
+            <h2>{title}</h2>
+            <h4>{author}</h4>
+            <h5>{category}</h5>
+          </div>
+          <div className="btn">
+            <button type="button">
+              Comments
+            </button>
+            <button type="button" onClick={remove}>
+              Remove
+            </button>
+            <button type="button">
+              Edit
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="btn">
-        <button type="button">
-          Comments
-        </button>
-        <button type="button">
-          Remove
-        </button>
-        <button type="button">
-          Edit
-        </button>
-      </div>
-    </div>
-    <div className="book-info">
-      <div className="description">
-        <h2>Book 2</h2>
-        <h4>Ahad</h4>
-      </div>
-      <div className="btn">
-        <button type="button">
-          Comments
-        </button>
-        <button type="button">
-          Remove
-        </button>
-        <button type="button">
-          Edit
-        </button>
-      </div>
-    </div>
-    <div className="book-info">
-      <div className="description">
-        <h2>Book 3</h2>
-        <h4>Diego</h4>
-      </div>
-      <div className="btn">
-        <button type="button">
-          Comments
-        </button>
-        <button type="button">
-          Remove
-        </button>
-        <button type="button">
-          Edit
-        </button>
-      </div>
-    </div>
-    <div className="book-info">
-      <div className="description">
-        <h2>Book 3</h2>
-        <h4>Diego</h4>
-      </div>
-      <div className="btn">
-        <button type="button">
-          Comments
-        </button>
-        <button type="button">
-          Remove
-        </button>
-        <button type="button">
-          Edit
-        </button>
-      </div>
-    </div>
-  </div>
-);
-
-export default Books;
+        );
+    };
+    
+    Books.propTypes = {
+      id: propTypes.string.isRequired,
+      title: propTypes.string.isRequired,
+      author: propTypes.string.isRequired,
+      category: propTypes.string.isRequired,
+    };
+    
+    export default Books;
