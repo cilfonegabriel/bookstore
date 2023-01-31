@@ -29,10 +29,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Math Magician] <a name="about-project"></a>
+# 📖 [Book Store] <a name="about-project"></a>
 
 
-**[Math Magician]** Is a react app with a calculator and math quotes.
+**[Book Store]** Is a react app with a calculator and math quotes.
 
 ## 🛠 Built With <a name="built-with"></a>
 

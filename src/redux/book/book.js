@@ -2,7 +2,9 @@ const ADD_A_BOOK = 'bookStore/book/ADD_A_BOOK';
 const REMOVE_A_BOOK = 'bookStore/book/REMOVE_A_BOOK';
 const LIST_BOOKS = 'bookStore/book/LIST_BOOKS';
 
-const initialState = [];
+const initialState = [{
+  id: '1', title: 'bealy', author: 'father', category: 'java',
+}];
 
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
