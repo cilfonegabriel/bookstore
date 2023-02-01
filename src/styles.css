@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --azure: #0290ff;
+  --black: #121212;
+  --pale-grey: #f5f6fa;
+  --medium-blue: #307bbe;
+}
+
+.body {
+  padding: 1%;
+  background-color: #f5f6fa;
+}
+
+.container {
+  height: 80%;
+}
+
+#root {
+  width: 100%;
+  height: 89.625rem;
+  padding-top: 3.313rem;
+  background-color: var(--pale-grey);
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navBar {
+  width: 87.5rem;
+  height: 5.938rem;
+  margin: 10px 20px 0 0;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navLink {
+  list-style: none;
+}
+
+.currentPage {
+  color: var(--black);
+  opacity: 1;
+  font-weight: bold;
+}
+
+a {
+  margin: 1.125rem 2.563rem 0.688rem 0;
+}
+
+.userBtn {
+  margin: 0 0 0 35rem;
+  padding: 0.875rem;
+}
+
+.booksPage {
+  width: 87.5rem;
+  height: 68.563rem;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 var(--black-5);
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book {
+  width: 100%;
+  height: 10.625rem;
+  margin-top: 2.13rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  display: flex;
+}
+
+.progressBlock {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progressContainer {
+  width: 5.625rem;
+  height: 5.625rem;
+  padding: 0.63rem 0.625rem 0.75rem 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progressStatus {
+  width: 5rem;
+  height: 1.125rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  color: var(--black);
+  opacity: 0.8;
+}
+
+.progress-divider {
+  width: 0.2rem;
+  margin: 25px 2rem 25px 2rem;
+  background-color: #e8e8e8;
+}
+
+.chapterInfo {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bookTitle {
+  width: 15.313rem;
+  margin: 0.188rem 20.188rem 0 0;
+}
+
+.bookAuthor {
+  font-weight: 300;
+}
+
+.actionBtn {
+  padding-right: 7px;
+}
+
+.formContainer {
+  margin-top: 4.438rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CATEGORÍES STYLES */
+
+.categoryBtn {
+  width: 11.5rem;
+  height: 2.813rem;
+  border-radius: 3px;
+}

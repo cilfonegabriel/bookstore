@@ -1,20 +1,26 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
-import Navbar from './components/navbar/Navbar';
-import Home from './pages/home/Home';
-import Categories from './pages/Categories/Categories';
+import { useDispatch } from 'react-redux';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Categories from './Pages/Categories';
+import Navbar from './components/Navbar';
+import Books from './Pages/Books';
+import getBooks from './redux/Thunks/get_books';
 
-const App = () => (
-  <>
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/categories" element={<Categories />} />
-      </Routes>
-    </BrowserRouter>
-  </>
-);
+function App() {
+  const dispatch = useDispatch();
+  dispatch(getBooks());
+
+  return (
+    <Router>
+      <div className="container">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Books />} />
+          <Route path="/categories" element={<Categories />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
 
 export default App;
