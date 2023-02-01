@@ -1,3 +1,5 @@
+import data from '../../components/api/Data';
+
 const ADD_A_BOOK = 'bookStore/book/ADD_A_BOOK';
 const REMOVE_A_BOOK = 'bookStore/book/REMOVE_A_BOOK';
 const LIST_BOOKS = 'bookStore/book/LIST_BOOKS';
@@ -12,12 +14,13 @@ const booksReducer = (state = initialState, action) => {
     return state.filter((book) => book.id !== action.book);
   }
   if (action.type === LIST_BOOKS) {
-    return state;
+    return action.list;
   }
   return state;
 };
 
 export const addBook = (book) => async (dispatch) => {
+  data.add(book);
   dispatch({
     type: ADD_A_BOOK,
     book,
@@ -25,6 +28,7 @@ export const addBook = (book) => async (dispatch) => {
 };
 
 export const removeBook = (book) => async (dispatch) => {
+  data.remove(book);
   dispatch({
     type: REMOVE_A_BOOK,
     book,
@@ -32,8 +36,10 @@ export const removeBook = (book) => async (dispatch) => {
 };
 
 export const listBooks = () => async (dispatch) => {
+  const list = await data.allBooks();
   dispatch({
     type: LIST_BOOKS,
+    list,
   });
 };
 
